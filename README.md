@@ -118,6 +118,7 @@ $ ssh-add /home/.ssh/id_rsa
 export RUBYOPT=-EUTF-8
 ```
 
+
 ### 3. 同期・デプロイ
 あとはコマンド一発で同期が可能です。  
 本番のデータをローカルにバックアップしたい場合は、、  
@@ -140,3 +141,17 @@ $ wordmove push --all
 # TODO
 * wordmoveで毎回ssh-addの設定を行う手間を削減（docker-composeのcommandで行う？）
 * MySQLのデータ永続化の設定追加
+
+
+# 便利シェルスクリプト
+```
+# 起動
+sh ./up.sh
+# 停止
+sh ./donw.sh
+
+# SSH接続
+$ sh ./exec.sh
+## コンテナ内で実行
+$ sh ./ssh-config.sh
+```
