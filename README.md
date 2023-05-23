@@ -146,9 +146,9 @@ $ wordmove push --all
 # 便利シェルスクリプト
 ```
 # 起動
-sh ./up.sh
+$ sh ./up.sh
 # 停止
-sh ./donw.sh
+$ sh ./donw.sh
 
 # SSH接続
 $ sh ./exec.sh
