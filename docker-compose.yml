@@ -14,6 +14,8 @@ services:
             MYSQL_DATABASE: wordpress
             MYSQL_PASSWORD: wordpress
             MYSQL_ROOT_PASSWORD: wordpress
+        volumes:
+            - ./db_data:/var/lib/mysql
     wordpress:
         depends_on:
             - database
@@ -52,3 +54,5 @@ services:
             PRODUCTION_SSH_HOST: "${PRODUCTION_SSH_HOST}"
             PRODUCTION_SSH_USER: "${PRODUCTION_SSH_USER}"
             PRODUCTION_SSH_PORT: "${PRODUCTION_SSH_PORT}"
+volumes:
+    db_data:
