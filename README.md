@@ -152,9 +152,12 @@ $ wordmove push --all
 $ sh ./up.sh
 # 停止
 $ sh ./donw.sh
-
-# SSH接続
+# wordmoveコンテナ内に接続
 $ sh ./exec.sh
-## コンテナ内で実行
+```
+
+## SSH接続設定（ssh-add）をコマンド1回で行う
+```
+# wordmoveコンテナ内で実行
 $ sh ./ssh-config.sh
 ```
