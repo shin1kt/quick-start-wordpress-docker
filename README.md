@@ -140,7 +140,10 @@ $ wordmove push --all
 
 # TODO
 * wordmoveで毎回ssh-addの設定を行う手間を削減（docker-composeのcommandで行う？）
-* MySQLのデータ永続化の設定追加
+
+# MySQLのデータ永続化の設定追加
+
+- [db_dataに保存](https://github.com/shin1kt/quick-start-wordpress-docker/commit/ff1fe415a712258c9c05e1d12d1923704807ae4c) 
 
 
 # 便利シェルスクリプト
