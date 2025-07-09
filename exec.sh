@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker compose exec -w /home/ -it wordmove /bin/bash
+docker compose exec wordmove bash -c "cd /home && bash"
