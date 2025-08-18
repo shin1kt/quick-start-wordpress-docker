@@ -161,3 +161,40 @@ $ sh ./exec.sh
 # wordmoveコンテナ内で実行
 $ sh ./ssh-config.sh
 ```
+
+## WordMove + URL置換 自動化スクリプト
+
+WordMoveでpull/push時に、自動的にURL置換を行うスクリプトを用意しています。
+
+### 使用方法
+
+```bash
+# wordmoveコンテナ内で実行
+# sh ./exec.sh
+# でdocker内に入れます。
+
+# 全体pull + URL置換（本番→ローカル）
+$ ./pull-and-replace.sh
+
+# DBのみpull + URL置換（本番→ローカル）
+$ ./pull-db.sh
+
+# 全体push + URL置換（ローカル→本番→ローカル）
+$ ./push-all.sh
+
+# DBのみpush + URL置換（ローカル→本番→ローカル）
+$ ./push-db.sh
+```
+
+### スクリプトの動作
+
+**Pull系スクリプト:**
+1. WordMoveでサーバーからデータを取得
+2. シリアライズされたデータも含めて、サーバーのURLをローカルURLに自動置換
+
+**Push系スクリプト:**
+1. ローカルURLを本番URLに置換
+2. WordMoveでサーバーにデータをpush
+3. ローカル環境を元に戻すため、本番URLをローカルURLに再置換
+
+これにより、手動でのURL置換作業が不要になり、安全にローカル⇔本番環境の同期が可能です。
